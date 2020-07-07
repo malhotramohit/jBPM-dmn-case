@@ -21,6 +21,9 @@
   <dmn:decision id="_DA147ADC-4038-409B-A634-DE5DC716A0BE" name="status">
     <dmn:extensionElements/>
     <dmn:variable id="_F2B9E317-3FB0-4BDD-87C9-AE60090FD2D1" name="status" typeRef="string"/>
+    <dmn:informationRequirement id="_82DB077B-E092-49E3-95E3-8A716C096C43">
+      <dmn:requiredInput href="#_4326F3C5-3976-474C-912B-DFBBBD5A89A2"/>
+    </dmn:informationRequirement>
     <dmn:decisionTable id="_90D46D26-E60E-40D6-B76F-E9831C512129" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
       <dmn:input id="_CA6550D6-5A8B-45B1-ABDC-FC4143774BD7">
         <dmn:inputExpression id="_1361F3D4-6BC6-4F7D-BB93-18B62750CA88" typeRef="number">
@@ -62,6 +65,10 @@
       </dmn:rule>
     </dmn:decisionTable>
   </dmn:decision>
+  <dmn:inputData id="_4326F3C5-3976-474C-912B-DFBBBD5A89A2" name="authRequestDO">
+    <dmn:extensionElements/>
+    <dmn:variable id="_B1E72E74-B7D0-497C-807C-638DCCDB92C9" name="authRequestDO" typeRef="AuthRequestDO"/>
+  </dmn:inputData>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram>
       <di:extension>
@@ -76,6 +83,15 @@
           </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
       </di:extension>
+      <dmndi:DMNShape id="dmnshape-_4326F3C5-3976-474C-912B-DFBBBD5A89A2" dmnElementRef="_4326F3C5-3976-474C-912B-DFBBBD5A89A2" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="210" y="185" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-_DA147ADC-4038-409B-A634-DE5DC716A0BE" dmnElementRef="_DA147ADC-4038-409B-A634-DE5DC716A0BE" isCollapsed="false">
         <dmndi:DMNStyle>
           <dmndi:FillColor red="255" green="255" blue="255"/>
@@ -85,6 +101,10 @@
         <dc:Bounds x="389" y="82" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
+      <dmndi:DMNEdge id="dmnedge-_82DB077B-E092-49E3-95E3-8A716C096C43" dmnElementRef="_82DB077B-E092-49E3-95E3-8A716C096C43">
+        <di:waypoint x="260" y="210"/>
+        <di:waypoint x="389" y="107"/>
+      </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
 </dmn:definitions>
