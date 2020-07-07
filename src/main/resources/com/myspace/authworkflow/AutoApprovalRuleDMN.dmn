@@ -51,10 +51,10 @@
           <dmn:text>2</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_8B7BAAFA-09DB-45F4-B109-5B4AC59611F3">
-          <dmn:text>"d10"</dmn:text>
+          <dmn:text>d10</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_A67C3463-0727-43C0-AAB3-EAA4C489D8C2">
-          <dmn:text>"DME"</dmn:text>
+          <dmn:text>DME</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_7F49637D-7B91-4F32-8D5A-D3CEE3A416D5">
           <dmn:text>"Approved"</dmn:text>
