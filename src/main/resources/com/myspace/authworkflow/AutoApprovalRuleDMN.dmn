@@ -1,11 +1,110 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_5EA47177-CEBE-4C1F-9198-A394627D3D39" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_70F0B6FD-FD99-4EB4-99FF-25130E769978" name="AutoApprovalRuleDMN" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://kiegroup.org/dmn/_5EA47177-CEBE-4C1F-9198-A394627D3D39">
   <dmn:extensionElements/>
+  <dmn:itemDefinition id="_9E845441-9998-4820-A534-1AAD97F5FC74" name="Insert a name" isCollection="false">
+    <dmn:typeRef>Any</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_F92E30C2-3359-4AF2-A3C4-59FF587358CE" name="AuthRequestDO" isCollection="false">
+    <dmn:itemComponent id="_92718EED-6129-4F86-8B4B-68A5188DCA38" name="status" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_5559E473-0D95-49C9-8A81-98AE8980A92D" name="icd10" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_D39A85B2-BDA1-4EB4-AE65-970E316A6648" name="authRequestId" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_20873F68-4EE6-4389-93B2-92B9C4AB4E88" name="requestType" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+  </dmn:itemDefinition>
+  <dmn:inputData id="_A611430F-9053-48E6-88EB-A2EC7FB64B42" name="authRequestDO">
+    <dmn:extensionElements/>
+    <dmn:variable id="_33952A48-1730-4A37-ABF3-0F62970B1454" name="authRequestDO" typeRef="AuthRequestDO"/>
+  </dmn:inputData>
+  <dmn:decision id="_DA147ADC-4038-409B-A634-DE5DC716A0BE" name="authRequestDO.status">
+    <dmn:extensionElements/>
+    <dmn:variable id="_F2B9E317-3FB0-4BDD-87C9-AE60090FD2D1" name="authRequestDO.status" typeRef="string"/>
+    <dmn:informationRequirement id="_33C0F911-F877-4C66-9B22-2EA5D7FCCA55">
+      <dmn:requiredInput href="#_A611430F-9053-48E6-88EB-A2EC7FB64B42"/>
+    </dmn:informationRequirement>
+    <dmn:decisionTable id="_90D46D26-E60E-40D6-B76F-E9831C512129" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
+      <dmn:input id="_CA6550D6-5A8B-45B1-ABDC-FC4143774BD7">
+        <dmn:inputExpression id="_1361F3D4-6BC6-4F7D-BB93-18B62750CA88" typeRef="number">
+          <dmn:text>authRequestDO.authRequestId</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_D2B2D4DC-E4CE-4EBB-B201-33BEE4E30992">
+        <dmn:inputExpression id="_F59D30CD-5D52-4D15-87C8-31D76C5354C4" typeRef="string">
+          <dmn:text>authRequestDO.icd10</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_F70B86B4-09AD-459F-AD1A-26B742A426D9">
+        <dmn:inputExpression id="_1C309F3A-EF56-4B28-9351-B9DF63950611" typeRef="string">
+          <dmn:text>authRequestDO.requestType</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output id="_0F898A0B-3BCB-4F07-A726-95BDFC799286">
+        <dmn:defaultOutputEntry id="_810DA4DF-897C-4324-9907-07C70A53FDCA">
+          <dmn:text>Done</dmn:text>
+        </dmn:defaultOutputEntry>
+      </dmn:output>
+      <dmn:annotation name="annotation-1"/>
+      <dmn:rule id="_B2B56906-CAC9-49A8-ACDF-E7C5C6A024D3">
+        <dmn:inputEntry id="_C4130EC1-7442-4C45-8DCB-03F523F5E348">
+          <dmn:text>1</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_8B7BAAFA-09DB-45F4-B109-5B4AC59611F3">
+          <dmn:text>"d10"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_A67C3463-0727-43C0-AAB3-EAA4C489D8C2">
+          <dmn:text>"DME"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_7F49637D-7B91-4F32-8D5A-D3CEE3A416D5">
+          <dmn:text>"Approved"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text></dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
+  </dmn:decision>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram>
       <di:extension>
-        <kie:ComponentsWidthsExtension/>
+        <kie:ComponentsWidthsExtension>
+          <kie:ComponentWidths dmnElementRef="_90D46D26-E60E-40D6-B76F-E9831C512129">
+            <kie:width>50.0</kie:width>
+            <kie:width>100.0</kie:width>
+            <kie:width>100.0</kie:width>
+            <kie:width>100.0</kie:width>
+            <kie:width>100.0</kie:width>
+            <kie:width>100.0</kie:width>
+          </kie:ComponentWidths>
+        </kie:ComponentsWidthsExtension>
       </di:extension>
+      <dmndi:DMNShape id="dmnshape-_A611430F-9053-48E6-88EB-A2EC7FB64B42" dmnElementRef="_A611430F-9053-48E6-88EB-A2EC7FB64B42" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="247" y="185" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-_DA147ADC-4038-409B-A634-DE5DC716A0BE" dmnElementRef="_DA147ADC-4038-409B-A634-DE5DC716A0BE" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="389" y="82" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="dmnedge-_33C0F911-F877-4C66-9B22-2EA5D7FCCA55" dmnElementRef="_33C0F911-F877-4C66-9B22-2EA5D7FCCA55">
+        <di:waypoint x="297" y="210"/>
+        <di:waypoint x="389" y="107"/>
+      </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
 </dmn:definitions>
