@@ -9,14 +9,17 @@ public class AuthRequestDO implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "Auth Request ID")
+	@org.kie.api.definition.type.Label("Auth Request ID")
 	private java.lang.Long authRequestId;
 
-	@org.kie.api.definition.type.Label(value = "Request Type ")
+	@org.kie.api.definition.type.Label("Request Type ")
 	private java.lang.String requestType;
 
-	@org.kie.api.definition.type.Label(value = "ICD10 Codes")
+	@org.kie.api.definition.type.Label("ICD10 Codes")
 	private java.lang.String icd10;
+
+	@org.kie.api.definition.type.Label(value = "Status")
+	private java.lang.String status;
 
 	public AuthRequestDO() {
 	}
@@ -45,11 +48,21 @@ public class AuthRequestDO implements java.io.Serializable {
 		this.icd10 = icd10;
 	}
 
+	public java.lang.String getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(java.lang.String status) {
+		this.status = status;
+	}
+
 	public AuthRequestDO(java.lang.Long authRequestId,
-			java.lang.String requestType, java.lang.String icd10) {
+			java.lang.String requestType, java.lang.String icd10,
+			java.lang.String status) {
 		this.authRequestId = authRequestId;
 		this.requestType = requestType;
 		this.icd10 = icd10;
+		this.status = status;
 	}
 
 }
