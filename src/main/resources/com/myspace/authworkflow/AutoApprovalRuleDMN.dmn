@@ -18,13 +18,9 @@
       <dmn:typeRef>string</dmn:typeRef>
     </dmn:itemComponent>
   </dmn:itemDefinition>
-  <dmn:inputData id="_A611430F-9053-48E6-88EB-A2EC7FB64B42" name="authRequestDO">
+  <dmn:decision id="_DA147ADC-4038-409B-A634-DE5DC716A0BE" name="status">
     <dmn:extensionElements/>
-    <dmn:variable id="_33952A48-1730-4A37-ABF3-0F62970B1454" name="authRequestDO" typeRef="AuthRequestDO"/>
-  </dmn:inputData>
-  <dmn:decision id="_DA147ADC-4038-409B-A634-DE5DC716A0BE" name="authRequestDO.status">
-    <dmn:extensionElements/>
-    <dmn:variable id="_F2B9E317-3FB0-4BDD-87C9-AE60090FD2D1" name="authRequestDO.status" typeRef="string"/>
+    <dmn:variable id="_F2B9E317-3FB0-4BDD-87C9-AE60090FD2D1" name="status" typeRef="string"/>
     <dmn:informationRequirement id="_33C0F911-F877-4C66-9B22-2EA5D7FCCA55">
       <dmn:requiredInput href="#_A611430F-9053-48E6-88EB-A2EC7FB64B42"/>
     </dmn:informationRequirement>
@@ -69,6 +65,10 @@
       </dmn:rule>
     </dmn:decisionTable>
   </dmn:decision>
+  <dmn:inputData id="_A611430F-9053-48E6-88EB-A2EC7FB64B42" name="authRequestDO">
+    <dmn:extensionElements/>
+    <dmn:variable id="_33952A48-1730-4A37-ABF3-0F62970B1454" name="authRequestDO" typeRef="AuthRequestDO"/>
+  </dmn:inputData>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram>
       <di:extension>
@@ -83,15 +83,6 @@
           </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
       </di:extension>
-      <dmndi:DMNShape id="dmnshape-_A611430F-9053-48E6-88EB-A2EC7FB64B42" dmnElementRef="_A611430F-9053-48E6-88EB-A2EC7FB64B42" isCollapsed="false">
-        <dmndi:DMNStyle>
-          <dmndi:FillColor red="255" green="255" blue="255"/>
-          <dmndi:StrokeColor red="0" green="0" blue="0"/>
-          <dmndi:FontColor red="0" green="0" blue="0"/>
-        </dmndi:DMNStyle>
-        <dc:Bounds x="247" y="185" width="100" height="50"/>
-        <dmndi:DMNLabel/>
-      </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-_DA147ADC-4038-409B-A634-DE5DC716A0BE" dmnElementRef="_DA147ADC-4038-409B-A634-DE5DC716A0BE" isCollapsed="false">
         <dmndi:DMNStyle>
           <dmndi:FillColor red="255" green="255" blue="255"/>
@@ -99,6 +90,15 @@
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
         <dc:Bounds x="389" y="82" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-_A611430F-9053-48E6-88EB-A2EC7FB64B42" dmnElementRef="_A611430F-9053-48E6-88EB-A2EC7FB64B42" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="247" y="185" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNEdge id="dmnedge-_33C0F911-F877-4C66-9B22-2EA5D7FCCA55" dmnElementRef="_33C0F911-F877-4C66-9B22-2EA5D7FCCA55">
