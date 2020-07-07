@@ -7,29 +7,49 @@ package com.myspace.authworkflow;
 @javax.persistence.Entity
 public class AuthRequestDO implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    @javax.persistence.GeneratedValue(generator = "AUTHREQUESTDO_ID_GENERATOR", strategy = javax.persistence.GenerationType.AUTO)
-    @javax.persistence.Id
-    @javax.persistence.SequenceGenerator(name = "AUTHREQUESTDO_ID_GENERATOR", sequenceName = "AUTHREQUESTDO_ID_SEQ")
-    private java.lang.Long id;
+	@org.kie.api.definition.type.Label(value = "Auth Request ID")
+	private java.lang.Long authRequestId;
 
-    public AuthRequestDO() {
-    }
-    
-    public AuthRequestDO(java.lang.Long id) {
-        this.id = id;
-    }
+	@org.kie.api.definition.type.Label(value = "Request Type ")
+	private java.lang.String requestType;
 
-    public java.lang.Long getId() {
-        return this.id;
-    }
-    
-    public void setId(java.lang.Long id) {
-        this.id = id;
-    }
+	@org.kie.api.definition.type.Label(value = "ICD10 Codes")
+	private java.lang.String icd10;
 
+	public AuthRequestDO() {
+	}
 
+	public java.lang.Long getAuthRequestId() {
+		return this.authRequestId;
+	}
 
+	public void setAuthRequestId(java.lang.Long authRequestId) {
+		this.authRequestId = authRequestId;
+	}
+
+	public java.lang.String getRequestType() {
+		return this.requestType;
+	}
+
+	public void setRequestType(java.lang.String requestType) {
+		this.requestType = requestType;
+	}
+
+	public java.lang.String getIcd10() {
+		return this.icd10;
+	}
+
+	public void setIcd10(java.lang.String icd10) {
+		this.icd10 = icd10;
+	}
+
+	public AuthRequestDO(java.lang.Long authRequestId,
+			java.lang.String requestType, java.lang.String icd10) {
+		this.authRequestId = authRequestId;
+		this.requestType = requestType;
+		this.icd10 = icd10;
+	}
 
 }
