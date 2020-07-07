@@ -27,17 +27,17 @@
     <dmn:decisionTable id="_90D46D26-E60E-40D6-B76F-E9831C512129" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
       <dmn:input id="_CA6550D6-5A8B-45B1-ABDC-FC4143774BD7">
         <dmn:inputExpression id="_1361F3D4-6BC6-4F7D-BB93-18B62750CA88" typeRef="number">
-          <dmn:text>authRequestId</dmn:text>
+          <dmn:text>authRequestDO.authRequestId</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
       <dmn:input id="_D2B2D4DC-E4CE-4EBB-B201-33BEE4E30992">
         <dmn:inputExpression id="_F59D30CD-5D52-4D15-87C8-31D76C5354C4" typeRef="string">
-          <dmn:text>icd10</dmn:text>
+          <dmn:text>authRequestDO.icd10</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
       <dmn:input id="_F70B86B4-09AD-459F-AD1A-26B742A426D9">
         <dmn:inputExpression id="_1C309F3A-EF56-4B28-9351-B9DF63950611" typeRef="string">
-          <dmn:text>requestType</dmn:text>
+          <dmn:text>authRequestDO.requestType</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
       <dmn:output id="_0F898A0B-3BCB-4F07-A726-95BDFC799286">
