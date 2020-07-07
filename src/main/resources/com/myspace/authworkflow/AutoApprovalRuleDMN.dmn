@@ -18,13 +18,13 @@
       <dmn:typeRef>string</dmn:typeRef>
     </dmn:itemComponent>
   </dmn:itemDefinition>
-  <dmn:decision id="_DA147ADC-4038-409B-A634-DE5DC716A0BE" name="authRequestDO.status">
+  <dmn:decision id="_DA147ADC-4038-409B-A634-DE5DC716A0BE" name="status">
     <dmn:extensionElements/>
-    <dmn:variable id="_F2B9E317-3FB0-4BDD-87C9-AE60090FD2D1" name="authRequestDO.status" typeRef="string"/>
+    <dmn:variable id="_F2B9E317-3FB0-4BDD-87C9-AE60090FD2D1" name="status" typeRef="string"/>
     <dmn:informationRequirement id="_82DB077B-E092-49E3-95E3-8A716C096C43">
       <dmn:requiredInput href="#_4326F3C5-3976-474C-912B-DFBBBD5A89A2"/>
     </dmn:informationRequirement>
-    <dmn:decisionTable id="_90D46D26-E60E-40D6-B76F-E9831C512129" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
+    <dmn:decisionTable id="_90D46D26-E60E-40D6-B76F-E9831C512129" hitPolicy="ANY" preferredOrientation="Rule-as-Row">
       <dmn:input id="_CA6550D6-5A8B-45B1-ABDC-FC4143774BD7">
         <dmn:inputExpression id="_1361F3D4-6BC6-4F7D-BB93-18B62750CA88" typeRef="number">
           <dmn:text>authRequestDO.authRequestId</dmn:text>
